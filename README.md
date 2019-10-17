@@ -39,8 +39,8 @@ run destroy.sh
 ./start-mysql.sh (optional)<br/>
 ./conn-mysql.sh (Optional)<br/>
 
-./init-hive-metastore.sh
-./start-hive.sh
+./init-hive-metastore.sh<br/>
+./start-hive.sh<br/>
 
 # Run beeline to test
 # !connect jdbc:hive2://localhost:10000 "" ""

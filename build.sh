@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker build -t teamsprint/hive:2.3 .
+sudo docker build -t teamsprint/hive:2.3 .
 

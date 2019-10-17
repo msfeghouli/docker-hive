@@ -12,8 +12,14 @@ RUN ln -s /opt/apache-hive-2.3.6-bin /opt/hive
 ENV HIVE_HOME /opt/hive
 ENV PATH $PATH:$HIVE_HOME/bin:$HIVE_HOME/hcatalog/sbin
 
-ADD hive-site.xml $HIVE_HOME/conf
-ADD init-db.sh /
+RUN wget http://www.java2s.com/Code/JarDownload/mysql/mysql-connector-java-commercial-5.1.7-bin.jar.zip
+RUN unzip mysql-connector-java-commercial-5.1.7-bin.jar.zip
+RUN mv mysql-connector-java-commercial-5.1.7-bin.jar  $HIVE_HOME/lib/
+RUN rm -f mysql-connector-java-commercial-5.1.7-bin.jar.zip
+
+ADD conf/hive-site.xml $HIVE_HOME/conf
+ADD script/init-hive-metastore.sh /
+ADD script/start-hive.sh /
   
 CMD ["/bin/bash"]
 

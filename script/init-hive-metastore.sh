@@ -30,3 +30,5 @@ send \"quit\\r\"
 expect eof
 "
 
+schematool -initSchema -dbType mysql
+

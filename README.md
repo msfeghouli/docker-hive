@@ -1,4 +1,4 @@
-# Apache Hive Docker Image
+# Hive Docker Image
 
 teamsprint/hive:2.3
 
@@ -36,12 +36,16 @@ run destroy.sh
 
 ./init-mysql.sh (MySQL setting)<br/>
 
-./start-mysql.sh (optional)<br/>
+./start-mysql.sh (Optional; already started by init-mysql.sh)<br/>
 ./conn-mysql.sh (Optional)<br/>
+./stop-mysql.sh (Optional)<br/>
 
-./init-hive-metastore.sh<br/>
-./start-hive.sh<br/>
+./init-hive-metastore.sh (Mandatory)<br/>
+./start-hive.sh (Mandatory)<br/>
+./conn-mysql.sh (Optional)<br/>
+./stop-hive.sh (Optional)<br/>
 
-# Run beeline to test
-# !connect jdbc:hive2://localhost:10000 "" ""
+# Stop Hive
+
+./stop-hive.sh
 

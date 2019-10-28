@@ -18,9 +18,15 @@ RUN mv mysql-connector-java-commercial-5.1.7-bin.jar  $HIVE_HOME/lib/
 RUN rm -f mysql-connector-java-commercial-5.1.7-bin.jar.zip
 
 ADD conf/hive-site.xml $HIVE_HOME/conf
+
 ADD script/init-hive-metastore.sh /
 ADD script/start-hive.sh /
+ADD script/conn-hive.sh /
+ADD script/stop-hive.sh /
   
+ADD Dockerfile /
+Add README.md /
+
 CMD ["/bin/bash"]
 
 # Hive server2 port

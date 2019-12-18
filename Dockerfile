@@ -24,8 +24,6 @@ ADD script/start-hive.sh /
 ADD script/conn-hive.sh /
 ADD script/stop-hive.sh /
   
-RUN hdfs dfs -mkdir -p /user/hive/warehouse
-
 ADD Dockerfile /
 ADD README.md /
 

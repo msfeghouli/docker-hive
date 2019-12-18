@@ -27,6 +27,8 @@ ADD script/stop-hive.sh /
 ADD Dockerfile /
 Add README.md /
 
+RUN hdfs dfs -mkdir -p /user/hive/warehouse
+
 CMD ["/bin/bash"]
 
 # Hive server2 port

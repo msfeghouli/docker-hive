@@ -35,17 +35,12 @@ run destroy.sh
 ./test-hadoop.sh (Optional)<br/>
 
 ./init-mysql.sh (MySQL setting)<br/>
-
 ./start-mysql.sh (Optional; already started by init-mysql.sh)<br/>
 ./conn-mysql.sh (Optional)<br/>
 ./stop-mysql.sh (Optional)<br/>
 
 ./init-hive-metastore.sh (Mandatory)<br/>
-./start-hive.sh (Mandatory)<br/>
-./conn-mysql.sh (Optional)<br/>
+./start-hive.sh (Optional)<br/>
+./conn-hive.sh (Optional)<br/>
 ./stop-hive.sh (Optional)<br/>
-
-# Stop Hive
-
-./stop-hive.sh
 

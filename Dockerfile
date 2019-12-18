@@ -24,10 +24,10 @@ ADD script/start-hive.sh /
 ADD script/conn-hive.sh /
 ADD script/stop-hive.sh /
   
-ADD Dockerfile /
-Add README.md /
-
 RUN hdfs dfs -mkdir -p /user/hive/warehouse
+
+ADD Dockerfile /
+ADD README.md /
 
 CMD ["/bin/bash"]
 

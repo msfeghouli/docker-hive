@@ -4,18 +4,18 @@ MAINTAINER Jooho Kim
 
 USER root
 
-RUN wget --secure-protocol=auto https://www-eu.apache.org/dist/hive/hive-2.3.6/apache-hive-2.3.6-bin.tar.gz
-RUN tar -zxvf apache-hive-2.3.6-bin.tar.gz -C /opt
-RUN rm -f apache-hive-2.3.6-bin.tar.gz
-RUN ln -s /opt/apache-hive-2.3.6-bin /opt/hive
+RUN wget http://mirror.navercorp.com/apache/hive/hive-2.3.6/apache-hive-2.3.6-bin.tar.gz \
+        && tar -zxvf apache-hive-2.3.6-bin.tar.gz -C /opt \
+        && rm -f apache-hive-2.3.6-bin.tar.gz \
+        && ln -s /opt/apache-hive-2.3.6-bin /opt/hive
 
 ENV HIVE_HOME /opt/hive
 ENV PATH $PATH:$HIVE_HOME/bin:$HIVE_HOME/hcatalog/sbin
 
-RUN wget http://www.java2s.com/Code/JarDownload/mysql/mysql-connector-java-commercial-5.1.7-bin.jar.zip
-RUN unzip mysql-connector-java-commercial-5.1.7-bin.jar.zip
-RUN mv mysql-connector-java-commercial-5.1.7-bin.jar  $HIVE_HOME/lib/
-RUN rm -f mysql-connector-java-commercial-5.1.7-bin.jar.zip
+RUN wget http://www.java2s.com/Code/JarDownload/mysql/mysql-connector-java-commercial-5.1.7-bin.jar.zip \
+        && unzip mysql-connector-java-commercial-5.1.7-bin.jar.zip \
+        && mv mysql-connector-java-commercial-5.1.7-bin.jar  $HIVE_HOME/lib/ \
+        && rm -f mysql-connector-java-commercial-5.1.7-bin.jar.zip
 
 ADD conf/hive-site.xml $HIVE_HOME/conf
 

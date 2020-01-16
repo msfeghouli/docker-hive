@@ -2,9 +2,6 @@
 
 teamsprint/hive:2.3
 
-[![DockerPulls](https://img.shields.io/docker/pulls/teamsprint/docker-hive.svg)](https://registry.hub.docker.com/u/teamsprint/docker-hive/)
-[![DockerStars](https://img.shields.io/docker/stars/teamsprint/docker-hive.svg)](https://registry.hub.docker.com/u/teamsprint/docker-hive/)
-
 # Based on (in a row)
 
 teamsprint/centos:7<br/>

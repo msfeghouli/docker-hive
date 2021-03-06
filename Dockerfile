@@ -1,13 +1,13 @@
 FROM teamsprint/mysql:5.7
 
-MAINTAINER Jooho Kim
+MAINTAINER Sofiane Feghouli
 
 USER root
 
-RUN wget http://mirror.navercorp.com/apache/hive/hive-2.3.6/apache-hive-2.3.6-bin.tar.gz \
-        && tar -zxvf apache-hive-2.3.6-bin.tar.gz -C /opt \
-        && rm -f apache-hive-2.3.6-bin.tar.gz \
-        && ln -s /opt/apache-hive-2.3.6-bin /opt/hive
+RUN wget http://mirror.navercorp.com/apache/hive/hive-2.3.8/apache-hive-2.3.8-bin.tar.gz \
+        && tar -zxvf apache-hive-2.3.8-bin.tar.gz -C /opt \
+        && rm -f apache-hive-2.3.8-bin.tar.gz \
+        && ln -s /opt/apache-hive-2.3.8-bin /opt/hive
 
 ENV HIVE_HOME /opt/hive
 ENV PATH $PATH:$HIVE_HOME/bin:$HIVE_HOME/hcatalog/sbin
